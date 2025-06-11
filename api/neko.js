@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     });
 
     const ext = url.split('.').pop().toLowerCase();
-    const contentType = ext === 'png' ? 'image/png' : 'image/jpeg';
+    const contentType = ext === 'jpg' ? 'image/png' : 'image/jpeg';
     res.setHeader('Content-Type', contentType);
 
     response.data.pipe(res);
